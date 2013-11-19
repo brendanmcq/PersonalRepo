@@ -9,4 +9,14 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>Event</display-name>
+    <servlet-name>Event</servlet-name>
+    <servlet-class>com.fightfinder.servlet.EventServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Event</servlet-name>
+    <url-pattern>/Event</url-pattern>
+  </servlet-mapping>
 </web-app>
