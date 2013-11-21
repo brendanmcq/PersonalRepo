@@ -1,13 +1,32 @@
 package com.fighterfinder.crawler;
 
+import java.io.IOException;
+import java.util.ArrayList;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
+import com.fightfinder.entity.FightEvent;
+
 public class FightCrawler {
 
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	
+	public ArrayList<FightEvent> gatherFightEvents(String url){
+		ArrayList<FightEvent> events = new ArrayList<FightEvent>();
+		
+		try {
+			Document doc = Jsoup.connect(url).get();
+			
+			//TODO gather up and create FightEvent entities
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		return events;
+		
 	}
+	
+	
 
 }
