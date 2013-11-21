@@ -17,8 +17,6 @@ public class FightCrawler {
 		try {
 			Document doc = Jsoup.connect(url).get();
 			
-			//TODO gather up and create FightEvent entities
-			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

@@ -19,4 +19,14 @@
     <servlet-name>Event</servlet-name>
     <url-pattern>/Event</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Base</display-name>
+    <servlet-name>Base</servlet-name>
+    <servlet-class>com.fightfinder.servlet.BaseServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Base</servlet-name>
+    <url-pattern>/Base</url-pattern>
+  </servlet-mapping>
 </web-app>
