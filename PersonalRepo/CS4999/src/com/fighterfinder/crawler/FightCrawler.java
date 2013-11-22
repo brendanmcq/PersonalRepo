@@ -25,6 +25,17 @@ public class FightCrawler {
 		
 	}
 	
+	public Document getHtmlDoc(String url){
+		
+		Document doc = null;
+		try {
+			doc = Jsoup.connect(url).get();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		return doc;
+	}
 	
 
 }
