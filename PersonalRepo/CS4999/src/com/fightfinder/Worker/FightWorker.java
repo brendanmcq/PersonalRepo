@@ -23,10 +23,8 @@ public class FightWorker {
 
 		for (Element elem : elements) {
 			if (elem.attr("itemprop").equals("startDate")) {
-				String dateStr = elem.attr("content");
-
-				dateStr = dateStr.substring(0, 10) + " "
-						+ dateStr.substring(20, dateStr.length());
+				
+				String dateStr = formatDateString(elem.attr("content"));
 
 				SimpleDateFormat formatter = new SimpleDateFormat(
 						"yyyy-MM-dd hh:mm", Locale.ENGLISH);
@@ -66,8 +64,10 @@ public class FightWorker {
 					int index = elements.indexOf(element);
 					Element previousElem = elements.get(index - 1);
 					
+					String dateStr = formatDateString(previousElem.attr("content"));
+					
 					event.setEventName(element.attr("content"));
-					event.setEventDate(previousElem.attr("content"));
+					event.setEventDate(dateStr);
 					//System.out.println(event);
 					
 					fightEvents.add(event);
@@ -77,6 +77,16 @@ public class FightWorker {
 		}
 		//System.out.println(fightEvents);
 		return fightEvents;
+	}
+	
+	private static String formatDateString(String date){
+		
+		String dateStr = date;
+
+		dateStr = dateStr.substring(0, 10) + " "
+				+ dateStr.substring(20, dateStr.length());
+
+		return dateStr;
 	}
 
 }
