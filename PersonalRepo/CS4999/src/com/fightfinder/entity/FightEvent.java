@@ -3,34 +3,34 @@ package com.fightfinder.entity;
 public class FightEvent {
 
 	
-	private String eventDate, eventName, organizer;
+	private String eventDate, eventName;
 	
 	public FightEvent(){
 		
 	}
 	
-	private String getEventDate() {
+	public String getEventDate() {
 		return eventDate;
 	}
 
-	private void setEventDate(String eventDate) {
+	public void setEventDate(String eventDate) {
 		this.eventDate = eventDate;
 	}
 
-	private String getEventName() {
+	public String getEventName() {
 		return eventName;
 	}
 
-	private void setEventName(String eventName) {
+	public void setEventName(String eventName) {
 		this.eventName = eventName;
 	}
 
-	public String getOrganizer() {
-		return organizer;
+	@Override
+	public String toString() {
+		return "FightEvent [eventDate=" + eventDate + ", eventName="
+				+ eventName + "]";
 	}
 
-	public void setOrganizer(String organizer) {
-		this.organizer = organizer;
-	}
+
 
 }
