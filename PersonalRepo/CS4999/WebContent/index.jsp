@@ -6,17 +6,19 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="com.fightfinder.entity.FightEvent" %>
 <%ArrayList<FightEvent> events = (ArrayList<FightEvent>)request.getAttribute("events"); %>
-
+<link rel="stylesheet" type="text/css" href="include/css/style.css">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Top Fight Finder</title>
 </head>
 
 <body>
-	<table>
-	<tr><th>Event</th><th>Date</th></tr>
+<div class="content">
+	<br>
 <%for(FightEvent event : events){%>
-	<tr><td><%=event.getEventName()%></td><td><%=event.getEventDate()%></td></tr>
+	<div class="fightEvent"><%=event.getEventName()%><br><%=event.getEventDate()%></div>
+	<br>
 <%}%>
-	</table>
+	
+</div>
 </body>
 </html>
