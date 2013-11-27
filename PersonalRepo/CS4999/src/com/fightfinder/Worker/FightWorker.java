@@ -56,8 +56,6 @@ public class FightWorker {
 				if (element.attr("content").contains("UFC")
 						|| element.attr("content")
 								.contains("Ultimate Fighter")
-						|| element.attr("content").contains(
-								"Glory World Series")
 						|| element.attr("content").contains("WSOF")
 						|| element.attr("content").contains("Bellator")) {
 
